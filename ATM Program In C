@@ -1,0 +1,70 @@
+#include<stdio.h>
+#include<conio.h>
+int main(){
+    int pin,a,card;
+    float balance=10000,deposit=5000,ac=123456789100,mob=12345678910,withdraw;
+    printf("\t*****Welcome*****");
+    printf("\n\t To SBI ATM");
+    printf("\n Please Insert Card\n");
+    scanf("%d",&card);
+    if(card==1){
+        printf("\nEnter Pin:");
+        scanf("%d",&pin);
+        if(pin==1020){
+            printf(">>>Main Menu<<<");
+            printf("\n1.)BALANCE  <");
+            printf("\n2.)WITHDRAW <");
+            printf("\n3.)DEPOSIT  <");
+            printf("\n4.)EXIT     <\n");
+            scanf("%d",&a);
+            if(a==1){
+                printf("Available Balance:%f",balance);
+            }
+            else if(a==2){
+                printf("Enter Withdraw Amount:");
+                scanf("%f",&withdraw);
+                if(withdraw>balance){
+                    printf("Insufficient Balance ");
+                }
+                else{
+                    printf("Please Wait....");
+                    printf("\nPlease Take Your Cash");
+                    printf("\nThank You For Using This ATM");
+                    printf("\n.");
+                    printf("\n.");
+                    printf("\n \t Available Balance:%f",balance-withdraw);
+                    printf("\n.");
+                    printf("\n\tDont Forget To Take Your Card");
+                }
+            }
+            else if(a==3){
+                printf("******Deposit******");
+                printf("\nEnter Ac No:");
+                scanf("%f",&ac);
+                if(ac==123456789100&&mob==12345678910){
+                    printf("\nEnter Mobile No:");
+                    scanf("%f",&mob);
+                    printf(".............");
+                    printf("\n \t Ac Holder:SaranBabu");
+                    printf("\n Please Wait....");
+                    printf("\n.");
+                    printf("\n Total Deposit Amount:%f",deposit);
+                    printf("\n.");
+                    printf("\n Available Balance :%f",balance+deposit);
+                }
+                else{
+                    printf("XXXX Incorrect Number XXXX");
+                }
+            }
+            else if(a==4){
+                printf(">>>> Thank You For Using This ATM <<<<");
+            }
+        }
+        else{
+            printf("Invalid Pin");
+        }
+    }
+    else{
+        printf(".Please Insert Card.");
+    }
+}
